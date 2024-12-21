@@ -1,11 +1,3 @@
-const meuPedido = {
-    itens:[
-        {nome:'produtoUm', valor: 50},
-        {nome: 'produtoDois', valor: 20},
-        {nome:'entrega', valor: 100, entrega: true}
-    ]
-}
-
 const calcularValorPedido = pedido =>{
     const valorPedido = pedido.itens.filter(item => !item.entrega).reduce((valorTotal, valorAtual) => valorTotal + valorAtual.valor, 0);
 
@@ -18,4 +10,4 @@ const calcularValorPedido = pedido =>{
     }
 }
 
-console.log(calcularValorPedido(meuPedido));
+module.exports = calcularValorPedido
